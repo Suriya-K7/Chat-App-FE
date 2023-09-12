@@ -1,8 +1,5 @@
 .report {
   min-height: 100vh;
-  background-image: url("../../assets/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   place-content: center;
   padding: 20px;

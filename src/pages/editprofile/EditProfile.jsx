@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./editprofile.css";
 import DataContext from "../../context/DataContext";
 import { ToastContainer, Zoom, toast } from "react-toastify";
 import { Formik, Form } from "formik";
 import TextField from "../../components/textField/TextField";
-import TextAreaField from "../../components/textField/TextAreaField";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 
 const EditProfile = () => {
@@ -60,15 +60,12 @@ const EditProfile = () => {
         image.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
         image.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
         // First save image to cloudinary
-        console.log(...image);
         const response = await fetch(`${import.meta.env.VITE_URL}`, {
           method: "post",
           body: image,
         });
         const imgData = await response.json();
-        console.log("imgdata", imgData);
         imageURL = imgData.url.toString();
-        console.log("imageURL", imageURL);
         // Save Profile
         const formData = {
           email: loggedUser.email,
@@ -238,6 +235,14 @@ const EditProfile = () => {
             </Form>
           )}
         </Formik>
+        <div className='d-flex justify-content-center flex-column align-items-center gap-2 mt-4 '>
+          <Link
+            to='/chat'
+            className='text-white button rounded noline'
+          >
+            Go back to Chat
+          </Link>
+        </div>
       </div>
       <ToastContainer
         position='top-right'
