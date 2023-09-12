@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import DataContext from "../../context/DataContext";
 import "./login.css";
 import { Link } from "react-router-dom";
+import { FaRocketchat } from "react-icons/fa";
 
 const Login = () => {
   const { handleSignIn, isLoading } = useContext(DataContext);
@@ -22,6 +23,12 @@ const Login = () => {
       <div className=' p-5'>
         <div className='container d-flex justify-content-center'>
           <div className='register__form'>
+            <h1
+              style={{ color: "var(--theme)" }}
+              className='text-center'
+            >
+              <FaRocketchat /> Chat Buddy
+            </h1>
             <Formik
               initialValues={{
                 email: "",
@@ -30,7 +37,7 @@ const Login = () => {
               validationSchema={validate}
               onSubmit={(values, { resetForm }) => {
                 handleSignIn(values);
-                // resetForm({ values: "" });
+                resetForm({ values: "" });
               }}
             >
               {({ values, setFieldValue }) => (
@@ -88,7 +95,6 @@ const Login = () => {
             </div>
           </div>
         </div>
-
         <ToastContainer
           position='top-right'
           autoClose={1000}
