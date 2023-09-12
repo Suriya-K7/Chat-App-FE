@@ -60,12 +60,15 @@ const EditProfile = () => {
         image.append("cloud_name", import.meta.env.VITE_CLOUD_NAME);
         image.append("upload_preset", import.meta.env.VITE_UPLOAD_PRESET);
         // First save image to cloudinary
+        console.log(...image);
         const response = await fetch(`${import.meta.env.VITE_URL}`, {
           method: "post",
           body: image,
         });
         const imgData = await response.json();
+        console.log("imgdata", imgData);
         imageURL = imgData.url.toString();
+        console.log("imageURL", imageURL);
         // Save Profile
         const formData = {
           email: loggedUser.email,
