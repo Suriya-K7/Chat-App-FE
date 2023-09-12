@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./editprofile.css";
 import DataContext from "../../context/DataContext";
-import { ToastContainer, Zoom } from "react-toastify";
+import { ToastContainer, Zoom, toast } from "react-toastify";
 import { Formik, Form } from "formik";
 import TextField from "../../components/textField/TextField";
 import TextAreaField from "../../components/textField/TextAreaField";
@@ -89,7 +89,6 @@ const EditProfile = () => {
           validationSchema={validate}
           onSubmit={(values, { resetForm }) => {
             handleProfileUpdate(values);
-            console.log(values);
             resetForm({ values: "" });
           }}
         >

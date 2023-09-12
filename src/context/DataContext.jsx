@@ -134,7 +134,6 @@ export const DataProvider = ({ children }) => {
       const updatedData = { token, formatUser };
       localStorage.setItem("loggedInUser", JSON.stringify(updatedData));
       setLoggedUser(updatedData.formatUser);
-      console.log(updatedData);
       toast.success("Profile Updated Successfully");
       setIsLoading(false);
       setTimeout(() => {
