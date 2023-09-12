@@ -28,7 +28,7 @@ const Chat = () => {
   const messageBoxRef = useRef();
 
   function connectToWS() {
-    const ws = new WebSocket("ws://chat-app-q9p1.onrender.com");
+    const ws = new WebSocket("wss://chat-app-q9p1.onrender.com");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
