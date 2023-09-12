@@ -20,7 +20,7 @@ const Login = () => {
   });
   return (
     <section className='login'>
-      <div className=' p-5'>
+      <div className=''>
         <div className='container d-flex justify-content-center'>
           <div className='register__form'>
             <h1
@@ -79,7 +79,7 @@ const Login = () => {
                 </Form>
               )}
             </Formik>
-            <div className='d-flex justify-content-between'>
+            <div className='d-flex login__btn justify-content-between'>
               <Link
                 to={"/register"}
                 className='text-white btn btn-success button rounded mt-3'
