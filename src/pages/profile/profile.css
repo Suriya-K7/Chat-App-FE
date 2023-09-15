@@ -48,3 +48,7 @@
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.profile__data h1 {
+  color: var(--theme);
+  text-shadow: 0 0 5px #fff;
+}

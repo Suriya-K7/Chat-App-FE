@@ -8,6 +8,8 @@ import {
   FaPaperclip,
   FaBug,
 } from "react-icons/fa";
+import { BiSolidDonateHeart } from "react-icons/bi";
+
 // import Avatar from "../../components/Avatar";
 import DataContext from "../../context/DataContext";
 import { unionBy } from "lodash";
@@ -198,6 +200,12 @@ const Chat = () => {
             className='btn__control'
           >
             <FaUserCog />
+          </Link>
+          <Link
+            to={"/supportdev"}
+            className='btn__control'
+          >
+            <BiSolidDonateHeart />
           </Link>
           <Link
             to={"/reportbug"}

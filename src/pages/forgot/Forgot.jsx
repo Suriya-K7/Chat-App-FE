@@ -5,6 +5,7 @@ import TextField from "../../components/textField/TextField";
 import * as Yup from "yup";
 import DataContext from "../../context/DataContext";
 import { Link } from "react-router-dom";
+import { FaRocketchat } from "react-icons/fa";
 
 const Forgot = () => {
   const { handleForgot, isLoading } = useContext(DataContext);
@@ -17,6 +18,12 @@ const Forgot = () => {
       <div className=' p-5'>
         <div className='container d-flex justify-content-center'>
           <div className='register__form'>
+            <h1
+              style={{ color: "var(--theme)" }}
+              className='text-center'
+            >
+              <FaRocketchat /> Chat Buddy
+            </h1>
             <Formik
               initialValues={{
                 email: "",
@@ -30,12 +37,12 @@ const Forgot = () => {
               {({ values, setFieldValue }) => (
                 <Form>
                   <div className='detailCards'>
-                    <h1
+                    <h2
                       style={{ color: "var(--theme" }}
                       className='text-center'
                     >
                       Forgot Password
-                    </h1>
+                    </h2>
                     <TextField
                       label='Email'
                       name='email'

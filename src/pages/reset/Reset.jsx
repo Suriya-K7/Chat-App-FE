@@ -7,6 +7,7 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { Formik, Form } from "formik";
 import TextField from "../../components/textField/TextField";
 import * as Yup from "yup";
+import { FaRocketchat } from "react-icons/fa";
 
 const Reset = () => {
   const { handleReset, setResetToken, isLoading } = useContext(DataContext);
@@ -32,6 +33,12 @@ const Reset = () => {
       <div className=' p-5'>
         <div className='container d-flex justify-content-center'>
           <div className='register__form'>
+            <h1
+              style={{ color: "var(--theme)" }}
+              className='text-center'
+            >
+              <FaRocketchat /> Chat Buddy
+            </h1>
             <Formik
               initialValues={{
                 email: "",
@@ -45,12 +52,12 @@ const Reset = () => {
               {({ values, setFieldValue }) => (
                 <Form>
                   <div className='detailCards'>
-                    <h1
+                    <h2
                       style={{ color: "var(--theme" }}
                       className='text-center'
                     >
                       Reset Password
-                    </h1>
+                    </h2>
                     <TextField
                       label='Password'
                       name='password'

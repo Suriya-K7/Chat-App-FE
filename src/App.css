@@ -81,3 +81,14 @@ input {
 .noline {
   text-decoration: none;
 }
+.app__logo {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  color: var(--theme);
+  position: relative;
+  transition: 0.3s;
+}
+.app__logo:hover {
+  text-shadow: 0 0 10px var(--theme);
+}

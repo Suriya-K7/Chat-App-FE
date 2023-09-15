@@ -12,6 +12,7 @@ import EditProfile from "./pages/editprofile/EditProfile";
 import Logout from "./pages/logout/Logout";
 import Reset from "./pages/reset/Reset";
 import ConfirmUser from "./pages/confirmUser/ConfirmUser";
+import SupportDev from "./pages/supportDev/SupportDev";
 
 function App() {
   const { loggedUser } = useContext(DataContext);
@@ -71,6 +72,10 @@ function App() {
             <Route
               path='/editProfile'
               element={<EditProfile />}
+            />
+            <Route
+              path='/supportdev'
+              element={<SupportDev />}
             />
             <Route
               path='/*'

@@ -43,12 +43,12 @@ const Login = () => {
               {({ values, setFieldValue }) => (
                 <Form>
                   <div className='detailCards'>
-                    <h1
+                    <h2
                       style={{ color: "var(--theme" }}
                       className='text-center'
                     >
                       Login
-                    </h1>
+                    </h2>
                     <TextField
                       label='Email'
                       name='email'

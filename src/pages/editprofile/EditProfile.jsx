@@ -6,6 +6,7 @@ import { Formik, Form } from "formik";
 import TextField from "../../components/textField/TextField";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { FaRocketchat } from "react-icons/fa";
 
 const EditProfile = () => {
   const {
@@ -79,7 +80,15 @@ const EditProfile = () => {
   };
   return (
     <section className='profile'>
-      <div className='container mt-5 update__profile'>
+      <div className='app__logo p-3 display-5'>
+        <Link
+          to={"/chat"}
+          className=' text-white text-decoration-none'
+        >
+          <FaRocketchat /> ChatBuddy
+        </Link>
+      </div>
+      <div className='container mt-1 update__profile'>
         <Formik
           initialValues={{
             username: loggedUser.username,

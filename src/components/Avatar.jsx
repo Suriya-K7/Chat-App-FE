@@ -20,7 +20,7 @@ const Avatar = ({ userId, username, online }) => {
       className='online__user__img'
       style={{ backgroundColor: `${color[userIdBase10 % 10]}` }}
     >
-      {username[0] ? username[0] : <FaUserAlt />}
+      {username ? username[0] : <FaUserAlt />}
       <div className={`online__user__status ${online ? "" : "offline"}`}></div>
     </div>
   );

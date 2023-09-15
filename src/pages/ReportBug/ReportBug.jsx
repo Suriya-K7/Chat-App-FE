@@ -10,6 +10,7 @@ import { BiCurrentLocation } from "react-icons/bi";
 import DataContext from "../../context/DataContext";
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
+import { FaRocketchat } from "react-icons/fa";
 
 const ReportBug = () => {
   const SERVICE = import.meta.env.VITE_SERVICE;
@@ -50,7 +51,15 @@ const ReportBug = () => {
 
   return (
     <section className='report'>
-      <div className='container__box'>
+      <div className='app__logo p-3 display-5'>
+        <Link
+          to={"/chat"}
+          className=' text-white text-decoration-none'
+        >
+          <FaRocketchat /> ChatBuddy
+        </Link>
+      </div>
+      <div className='container__box contact__container'>
         <div className='box p-3 rounded text-white'>
           <h2>Our Contact Information</h2>
           <p>Fill the form or contact us via other channels listed below</p>

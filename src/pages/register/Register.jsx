@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./register.css";
 import { ToastContainer, Zoom } from "react-toastify";
 import { Formik, Form } from "formik";
@@ -6,7 +6,7 @@ import TextField from "../../components/textField/TextField";
 import * as Yup from "yup";
 import DataContext from "../../context/DataContext";
 import { Link } from "react-router-dom";
-import api from "../../api/api";
+import { FaRocketchat } from "react-icons/fa";
 
 const Register = () => {
   const { handleSignUp, isLoading } = useContext(DataContext);
@@ -35,6 +35,12 @@ const Register = () => {
       <div className='  p-5'>
         <div className='container d-flex justify-content-center'>
           <div className='register__form'>
+            <h1
+              style={{ color: "var(--theme)" }}
+              className='text-center'
+            >
+              <FaRocketchat /> Chat Buddy
+            </h1>
             <Formik
               initialValues={{
                 username: "",
@@ -46,18 +52,18 @@ const Register = () => {
               validationSchema={validate}
               onSubmit={(values, { resetForm }) => {
                 handleSignUp(values);
-                // resetForm({ values: "" });
+                resetForm({ values: "" });
               }}
             >
               {({ values, setFieldValue }) => (
                 <Form>
                   <div className='detailCards'>
-                    <h1
+                    <h2
                       style={{ color: "var(--theme" }}
                       className='text-center'
                     >
                       Register
-                    </h1>
+                    </h2>
                     <TextField
                       label='Username'
                       name='username'
