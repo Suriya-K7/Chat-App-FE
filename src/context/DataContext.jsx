@@ -2,7 +2,6 @@ import { createContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../api/api";
 import { toast } from "react-toastify";
-// import useWindowSize from "../hooks/useWindowSize";
 
 const DataContext = createContext({});
 
