@@ -41,7 +41,8 @@ const Reset = () => {
             </h1>
             <Formik
               initialValues={{
-                email: "",
+                password: "",
+                cPassword: "",
               }}
               validationSchema={validate}
               onSubmit={(values, { resetForm }) => {
