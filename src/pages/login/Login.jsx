@@ -93,7 +93,7 @@ const Login = () => {
                 Forgot Password?
               </Link>
             </div>
-            <div className='text-center'>
+            {/* <div className='text-center'>
               <button
                 className='btn mt-2 btn btn-warning button rounded mt-3'
                 data-bs-toggle='modal'
@@ -101,10 +101,10 @@ const Login = () => {
               >
                 Demo Credentials
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div
+        {/* <div
           className='modal'
           id='myModal'
         >
@@ -134,7 +134,7 @@ const Login = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <ToastContainer
           position='top-right'
           autoClose={1000}
